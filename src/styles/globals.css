@@ -1,0 +1,280 @@
+/* src/styles/globals.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .intro {
+    margin-bottom: 2rem; /* Add some space between the paragraphs and the section below */
+  }
+  
+  .navbar {
+    background-color: #eabccb;
+    color: #fff;
+    padding: 2rem;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar li {
+    display: inline;
+    margin-right: 25px;
+  }
+
+  .quotes-section {
+    padding-top: 3rem; /* Adds space above the quotes section */
+  }
+  
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .quote-container {
+    display: flex;
+    justify-content: space-between; /* Evenly space the quotes horizontally */
+    align-items: center;
+    gap: 2rem; /* Add some space between each quote */
+    text-align: center;
+  }
+
+  .quote-author {
+    display: block;
+    margin-top: 0.5rem; /* Space between quote and author */
+    color: black; /* Gray color for author */
+    font-style: normal; /* Remove italic style */
+    font-weight: bold; /* Remove bold style */
+    font-size: 0.9rem; /* Slightly smaller font size for author */
+  }
+
+  .quotes-header {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem; /* Adds space between the header and the quotes */
+  }
+  
+  .quotes-line {
+    border: none;
+    border-top: 1px solid #ccc; /* Adjust color as needed */
+    margin: 0 auto; /* Centers the line */
+    width: 80%; /* Adjust width as needed */
+    align-self: stretch;;
+  }
+  
+  .quotes-title {
+    display: inline-block;
+    margin: 1 1rem; /* Space between line and text */
+    font-size: 1.25rem; /* Adjust size as needed */
+    color: #333; /* Adjust color as needed */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+  }
+  
+  .quote {
+    flex: 1;
+    font-style: italic;
+    font-weight: normal;
+    color: gray;
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+  
+  .main {
+    padding: 2rem;
+  }
+
+  /* Global styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+
+  .about-sections {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem; /* Add some space between the two sections */
+    margin-top: 2rem;
+  }
+  
+  /* Ensure sections are aligned properly */
+  .section {
+    width: 48%; /* Adjust the width as needed */
+  }
+  
+  /* Page container */
+  .page-container {
+    display: flex;
+    padding: 2rem;
+    /* height equal to visible window */
+    height: 100%;
+  }
+
+
+  
+  .left-column {
+    flex: 0 0 20%;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-column-about {
+    flex: 0 0 33%;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  
+
+  .title {
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+  }
+  
+  .page-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .image-container {
+    margin-bottom: 1rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    color: #6c757d; /* Dark gray subtitle */
+    white-space: pre-line; /* To display the newline in the subtitle */
+  }
+  
+  
+  .page-subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 1rem;
+    white-space: pre-line; /* To preserve line breaks in the subtitle */
+  }
+  
+/* Right column styling */
+.right-column-about {
+  flex: 1; /* Takes up the remaining space */
+  padding-left: 5rem;
+  padding-right: 6rem;
+  padding-top: 4rem;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.right-column {
+  flex: 1; /* Takes up the remaining space */
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 2rem;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+  
+  .right-column-about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding-right: 7rem;
+  }
+
+  .right-column p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .education-details {
+    display: block;
+    color: gray; /* Change the color to gray */
+    font-size: 0.8rem; /* Make the font smaller */
+  }
+
+  .year-separator {
+    position: relative;
+    margin: 20px 0;
+    text-align: right; /* Ensures the year appears on the far right */
+  }
+  
+  .year-separator hr {
+    border: none;
+    border-top: 1px solid #ddd; /* Light gray line */
+    margin: 0; /* No margin for the line itself */
+  }
+  
+  .year-label {
+    position: absolute;
+    right: 0;
+    top: -15px; /* Moves the year above the line */
+    background-color: white; /* Adds background to avoid overlap with the line */
+    padding: 0 10px;
+    font-size: 1.5em;
+    color: #666;
+  }
+
+  /* Make the layout responsive */
+@media (max-width: 768px) {
+
+    .about-layout {
+        flex-direction: column;
+        text-align: center;
+      }
+
+    .page-container {
+      flex-direction: column;
+    }
+
+    .about-sections {
+        flex-direction: column;
+      }
+    
+    .section {
+    width: 100%;
+    }
+  
+    .left-column, 
+    .right-column {
+      flex: none;
+      width: 100%;
+      padding: 1rem 0;
+    }
+  
+    .left-column,
+  .right-column {
+    width: 100%;
+    padding: 0;
+  }
+
+  .right-column {
+    padding-top: 2rem;
+  }
+  }
+  
+  .about-layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  

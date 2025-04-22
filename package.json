@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "static": "next build && next export"
+    "lint": "next lint"
   },
   "dependencies": {
     "@orcid/bibtex-parse-js": "^0.0.25",

@@ -2,22 +2,531 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Root variables and base styles */
 :root {
-  --background: #ffffff;
+  --background: #FAF0E6; /* Linen color */
   --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-playfair: var(--font-playfair);
+  --font-cormorant: var(--font-cormorant);
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  font-family: var(--font-cormorant), serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair), serif;
+}
+
+/* Layout */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #FFB6C1; /* Light pink */
+  padding: 1.25rem 0;
+  font-family: var(--font-playfair), serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 800px; /* Match the width of title image */
+  margin: 0 auto;
+  width: 800px;
+  box-sizing: border-box;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  font-size: 1.8rem;
+  display: block;
+  padding: 0.25rem 0.5rem;
+}
+
+.navbar a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Title section */
+.title-section {
+  margin: 3rem 0;
+}
+
+.image-container {
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.title-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Section styles */
+section {
+  margin: 5rem 0;
+  padding: 0 1rem;
+}
+
+section h2 {
+  font-size: 3.5rem;
+  color: #D8417A;
+  margin-bottom: 2.5rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 3px;
+  background-color: #C09F80;
+}
+
+section p {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Timeline styling */
+.timeline-wrapper {
+  position: relative;
+  max-width: 650px;
+  margin: 3rem auto;
+  padding: 1rem 0;
+}
+
+.timeline-vertical-line {
+  position: absolute;
+  left: 40px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #FFB6C1;
+  z-index: 1;
+}
+
+.timeline-row {
+  display: flex;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.timeline-point {
+  position: relative;
+  width: 80px;
+  flex-shrink: 0;
+}
+
+.timeline-circle {
+  position: absolute;
+  left: 40px;
+  top: 24px;
+  width: 24px;
+  height: 24px;
+  background-color: #FFB6C1;
+  border: 4px solid #FAF0E6;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 0 2px #D8417A;
+  z-index: 2;
+}
+
+.timeline-card {
+  flex-grow: 1;
+  background-color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-left: 1rem;
+}
+
+.timeline-time {
+  font-family: var(--font-playfair), serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #D8417A;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-card-title {
+  font-family: var(--font-playfair), serif;
+  font-size: 1.6rem;
+  color: #C09F80;
+  margin-bottom: 0.75rem;
+}
+
+.timeline-card p {
+  margin: 0.25rem 0;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.timeline-card p em {
+  font-style: italic;
+  color: #888;
+  font-size: 0.95rem;
+}
+
+/* Map and location styles */
+.map-container {
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: white;
+  padding: 12px;
+}
+
+.section-intro {
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+}
+
+.venue-details {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 2rem auto;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+
+.venue-card {
+  background-color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  min-width: 250px;
+  text-align: center;
+  flex: 1;
+}
+
+.venue-card h3 {
+  font-family: var(--font-playfair), serif;
+  color: #D8417A;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.venue-card p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+/* Transport options styling */
+.transport-options {
+  max-width: 900px;
+  margin: 3rem auto 1rem;
+}
+
+.transport-title {
+  font-family: var(--font-playfair), serif;
+  color: #C09F80;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.transport-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.transport-card {
+  background-color: white;
+  padding: 1.8rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+  position: relative;
+  text-align: left;
+}
+
+.transport-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.transport-card h4 {
+  font-family: var(--font-playfair), serif;
+  color: #D8417A;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.transport-card p {
+  margin-bottom: 0.7rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.transport-card p strong {
+  font-weight: 600;
+}
+
+.transport-link {
+  display: inline-block;
+  margin-top: 0.7rem;
+  color: #D8417A;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.transport-link:hover {
+  color: #C09F80;
+  text-decoration: underline;
+}
+
+/* Music section styling */
+.music-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.music-description {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.music-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: 2rem auto;
+}
+
+.spotify-container {
+  flex: 1;
+  min-width: 300px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.playlist-instructions {
+  flex: 1;
+  min-width: 300px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.playlist-instructions h3 {
+  color: #D8417A;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+}
+
+.playlist-instructions ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.playlist-instructions li {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.playlist-instructions a {
+  color: #D8417A;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.playlist-instructions a:hover {
+  color: #C09F80;
+  text-decoration: underline;
+}
+
+.music-note {
+  font-style: italic;
+  color: #888;
+  font-size: 1.1rem;
+}
+
+/* Cagnotte section styling */
+.cagnotte-container {
+  display: flex;
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.cagnotte-content {
+  flex: 3;
+  padding: 2.5rem;
+  text-align: left;
+  min-width: 300px;
+}
+
+.cagnotte-subtitle {
+  font-family: var(--font-playfair), serif;
+  color: #D8417A;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.cagnotte-message {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.cagnotte-button-container {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.cagnotte-button {
+  display: inline-block;
+  background-color: #D8417A;
+  color: white;
+  font-family: var(--font-playfair), serif;
+  font-size: 1.1rem;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(216, 65, 122, 0.3);
+}
+
+.cagnotte-button:hover {
+  background-color: #C03869;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(216, 65, 122, 0.4);
+}
+
+.cagnotte-note {
+  font-style: italic;
+  color: #888;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.cagnotte-image {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFF5F8;
+  padding: 2rem;
+}
+
+.gift-icon {
+  font-size: 5rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%;
+  }
+  
+  section h2 {
+    font-size: 2.8rem;
+  }
+  
+  .cagnotte-container {
+    flex-direction: column;
+  }
+  
+  .cagnotte-image {
+    order: -1;
+    padding: 1.5rem;
+  }
+  
+  .timeline-vertical-line {
+    left: 25px;
+  }
+  
+  .timeline-point {
+    width: 50px;
+  }
+  
+  .timeline-circle {
+    left: 25px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .timeline-card {
+    padding: 1.2rem 1.5rem;
+  }
+  
+  .venue-details {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .navbar a {
+    font-size: 1.4rem;
+  }
+  
+  .transport-cards {
+    gap: 1rem;
+  }
+  
+  .transport-card {
+    min-width: 100%;
+  }
 }
 
 @layer utilities {

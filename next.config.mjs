@@ -2,6 +2,7 @@
 
 const nextConfig = {
     output: 'export',
+    distDir: 'docs',  // Specify the output directory as 'docs'
     images: {
       unoptimized: true, // required if you use `next/image`
     },

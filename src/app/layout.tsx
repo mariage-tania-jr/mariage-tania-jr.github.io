@@ -1,19 +1,28 @@
 // src/app/layout.tsx
-import '../styles/globals.css';
-import Link from 'next/link';
+import './globals.css';
+import { Playfair_Display, Cormorant_Garamond } from 'next/font/google';
+
+const playfair = Playfair_Display({ 
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-playfair',
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-cormorant',
+});
+
+export const metadata = {
+  title: 'Tatiana & Jean-Romain Wedding',
+  description: 'Wedding celebration of Tatiana and Jean-Romain',
+};
 
 const Layout = ({ children }: { children: React.ReactNode }) => (
-  <html lang="en">
-    <body>
-      <nav className="navbar">
-        <ul>
-          <li><Link href="/about">Mariage Tatiana & Jean-Romain </Link></li>
-          <li><Link href="/publications">Programme</Link></li>
-          <li><Link href="/presentations">Accès et Parking</Link></li>
-          <li><Link href="/teaching">Musique</Link></li>
-          <li><Link href="/teaching">Cagnotte</Link></li>
-        </ul>
-      </nav>
+  <html lang="fr" className={`${playfair.variable} ${cormorant.variable}`}>
+    <body className={cormorant.className}>
       <main>{children}</main>
     </body>
   </html>

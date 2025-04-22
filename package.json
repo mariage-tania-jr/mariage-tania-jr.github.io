@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "static": "next build",
-    "build:github-pages": "cross-env NODE_ENV=production next build && node fix-asset-paths.js"
+    "static": "next build && next export"
   },
   "dependencies": {
     "@orcid/bibtex-parse-js": "^0.0.25",

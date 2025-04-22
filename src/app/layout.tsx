@@ -1,6 +1,7 @@
 // src/app/layout.tsx
 import './globals.css';
 import { Playfair_Display, Cormorant_Garamond } from 'next/font/google';
+import React from 'react';
 
 const playfair = Playfair_Display({ 
   subsets: ['latin'],
@@ -20,12 +21,16 @@ export const metadata = {
   description: 'Wedding celebration of Tatiana and Jean-Romain',
 };
 
-const Layout = ({ children }: { children: React.ReactNode }) => (
-  <html lang="fr" className={`${playfair.variable} ${cormorant.variable}`}>
-    <body className={cormorant.className}>
-      <main>{children}</main>
-    </body>
-  </html>
-);
-
-export default Layout;
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="fr" className={`${playfair.variable} ${cormorant.variable}`}>
+      <body className={cormorant.className}>
+        <main>{children}</main>
+      </body>
+    </html>
+  );
+}

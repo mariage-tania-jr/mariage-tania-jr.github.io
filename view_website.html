@@ -1,34 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Tatiana & Jean-Romain Wedding</title>
-  <meta http-equiv="refresh" content="0; URL=https://YOUR_USERNAME.github.io/mariage-tania-jr/">
+  <title>Testing Website Assets</title>
   <style>
     body {
-      font-family: sans-serif;
-      text-align: center;
-      margin: 40px;
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     h1 {
-      margin-bottom: 20px;
+      color: #333;
     }
-    p {
-      max-width: 600px;
-      margin: 20px auto;
+    .iframe-container {
+      width: 100%;
+      height: 600px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      overflow: hidden;
     }
-    a {
-      color: #0066cc;
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 15px;
+      background-color: #4CAF50;
+      color: white;
       text-decoration: none;
-      font-weight: bold;
-    }
-    a:hover {
-      text-decoration: underline;
+      border-radius: 4px;
     }
   </style>
 </head>
 <body>
-  <h1>Redirecting to Tatiana & Jean-Romain's Wedding Website</h1>
-  <p>If you are not automatically redirected, please <a href="https://YOUR_USERNAME.github.io/mariage-tania-jr/">click here</a> to visit our wedding website.</p>
+  <div class="container">
+    <h1>Wedding Website Preview</h1>
+    <p>This page lets you test if your website's CSS and assets are loading correctly:</p>
+    
+    <div class="iframe-container">
+      <iframe src="docs/index.html"></iframe>
+    </div>
+    
+    <p>If the website above looks correct with proper styling, your CSS paths are working!</p>
+    <p>You can now push the 'docs' folder to GitHub Pages.</p>
+    
+    <a href="docs/index.html" target="_blank" class="button">Open in New Tab</a>
+  </div>
 </body>
 </html>

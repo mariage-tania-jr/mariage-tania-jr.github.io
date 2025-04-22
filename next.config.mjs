@@ -8,21 +8,18 @@ const nextConfig = {
     output: 'export',
     distDir: 'docs',
     
-    // Use absolute URLs for GitHub Pages
+    // Use basePath for GitHub Pages
     basePath: isProd ? `/${repoName}` : '',
     
     // Add trailing slash for better path resolution
     trailingSlash: true,
     
-    // This is the key setting for GitHub Pages - ensure all asset URLs are correct
+    // This is the key setting for GitHub Pages
     assetPrefix: isProd ? `/${repoName}/` : '',
     
     // Required for Next.js Image component in static export
     images: {
       unoptimized: true,
-      // Make image src paths work properly on GitHub Pages
-      loader: 'custom',
-      loaderFile: './src/imageLoader.js',
     },
 }
 

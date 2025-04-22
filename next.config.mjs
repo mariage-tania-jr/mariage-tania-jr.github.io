@@ -1,17 +1,29 @@
 /** @type {import('next').NextConfig} */
 
-const isProduction = process.env.NODE_ENV === 'production';
-const basePath = isProduction ? '/mariage-tania-jr' : '';
+// For GitHub Pages deployment, we need to use a specific configuration
+const isProd = process.env.NODE_ENV === 'production';
+const repoName = 'mariage-tania-jr';
 
 const nextConfig = {
     output: 'export',
-    distDir: 'docs',  // Specify the output directory as 'docs'
-    basePath: basePath,  // Define the base path for GitHub Pages
-    assetPrefix: basePath,  // Use the same base path for assets
-    images: {
-      unoptimized: true, // required if you use `next/image`
-    },
+    distDir: 'docs',
+    
+    // Use absolute URLs for GitHub Pages
+    basePath: isProd ? `/${repoName}` : '',
+    
+    // Add trailing slash for better path resolution
     trailingSlash: true,
+    
+    // This is the key setting for GitHub Pages - ensure all asset URLs are correct
+    assetPrefix: isProd ? `/${repoName}/` : '',
+    
+    // Required for Next.js Image component in static export
+    images: {
+      unoptimized: true,
+      // Make image src paths work properly on GitHub Pages
+      loader: 'custom',
+      loaderFile: './src/imageLoader.js',
+    },
 }
 
 export default nextConfig;

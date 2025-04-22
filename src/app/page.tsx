@@ -2,16 +2,6 @@
 import React from 'react';
 import Image from 'next/image';
 
-// Create a function to get the base path depending on the environment
-const getBasePath = () => {
-  // When building for production (GitHub Pages), include the repo name
-  if (process.env.NODE_ENV === 'production') {
-    return '/mariage-tania-jr';
-  }
-  // In development, use root path
-  return '';
-};
-
 const Home = () => (
   <div className="container" style={{ textAlign: 'center' }}>
     <header className="navbar">
@@ -29,7 +19,7 @@ const Home = () => (
       <section id="main-title" className="title-section">
         <div className="image-container">
           <Image 
-            src={`${getBasePath()}/title-img.png`}
+            src="title-img.png" 
             alt="Tatiana & Jean-Romain"
             width={800}
             height={400}

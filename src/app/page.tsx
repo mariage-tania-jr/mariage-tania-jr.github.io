@@ -127,7 +127,7 @@ export default function Home() {
           
           <div className="map-container">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d2640.5246060672596!2d7.478273515731071!3d48.456519271371434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e2!4m3!3m2!1d48.4622979!2d7.4814933!4m3!3m2!1d48.4504608!2d7.482255399999999!5e0!3m2!1sfr!2sfr!4v1713783929736!5m2!1sfr!2sfr"
+              src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d2639.897840429089!2d7.478446099999999!3d48.46124639999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x47914d58de6ce7ed%3A0xe5e1dd87cdc774ba!2sPl.%20du%20March%C3%A9%2067210%20Obernai!3m2!1d48.4622198!2d7.4820322!4m5!1s0x47914d5f47a6d193%3A0x37b58f0c5a576eb8!2s11%20Rem%20Mar%C3%A9chal%20Joffre%2C%2067210%20Obernai%2C%20France!3m2!1d48.460364!2d7.480542!5e0!3m2!1sfr!2sfr!4v1717622540354!5m2!1sfr!2sfr"
               width="100%" 
               height="400"
               style={{ border: 0, borderRadius: '8px' }}

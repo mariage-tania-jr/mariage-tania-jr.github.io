@@ -9,8 +9,8 @@ export default function Home() {
         <nav>
           <ul className="nav-links">
             <li><a href="#programme">Programme</a></li>
-            <li><a href="#acces-parking">Accès et Parking</a></li>
             <li><a href="#musique">Musique</a></li>
+            <li><a href="#acces-parking">Accès et Parking</a></li>
             <li><a href="#cagnotte">Cagnotte</a></li>
           </ul>
         </nav>
@@ -84,7 +84,44 @@ export default function Home() {
               <div className="timeline-card">
                 <div className="timeline-time">Pour finir</div>
                 <h3 className="timeline-card-title">Apéritif Dînatoire</h3>
-                <p>Repas, musique et festivités</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="musique">
+          <h2>Musique</h2>
+          <div className="music-content">
+            <p>Aidez-nous à créer l&apos;ambiance parfaite pour notre cocktail !</p>
+            <p className="music-description">
+              Nous souhaitons que chacun puisse contribuer à la playlist de notre mariage. 
+              N&apos;hésitez pas à ajouter vos chansons préférées qui vous font danser, qui vous 
+              touchent ou qui vous rappellent de bons souvenirs.
+            </p>
+            
+            <div className="music-container">
+              <div className="spotify-container">
+                <iframe 
+                  src="https://open.spotify.com/embed/playlist/7dzmWwPA2p7rkSF4hE29Cx?utm_source=generator&theme=0" 
+                  width="100%" 
+                  height="380" 
+                  frameBorder="0" 
+                  allowFullScreen 
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                  loading="lazy"
+                  title="Playlist mariage Tatiana & Jean-Romain"
+                ></iframe>
+              </div>
+              
+              <div className="playlist-instructions">
+                <h3>Comment ajouter des chansons :</h3>
+                <ol>
+                  <li>Ouvrez la playlist sur Spotify en <a href="https://open.spotify.com/playlist/7dzmWwPA2p7rkSF4hE29Cx?si=f1849339a7bf48d1&pt=5fc4a78c206229e8075a07b4212e4dc9" target="_blank" rel="noopener noreferrer">cliquant ici</a></li>
+                  <li>Connectez-vous à votre compte Spotify</li>
+                  <li>Cliquez sur les trois points (...) et sélectionnez &quot;Ajouter à cette playlist&quot;</li>
+                  <li>Recherchez et ajoutez vos chansons préférées</li>
+                </ol>
+                {/* <p className="music-note">Vos suggestions nous aideront à créer une ambiance inoubliable pour cette journée spéciale !</p> */}
               </div>
             </div>
           </div>
@@ -96,7 +133,7 @@ export default function Home() {
           
           <div className="map-container">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d2640.5246060672596!2d7.478273515731071!3d48.456519271371434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e2!4m3!3m2!1d48.4622979!2d7.4814933!4m3!3m2!1d48.4504608!2d7.482255399999999!5e0!3m2!1sfr!2sfr!4v1713783929736!5m2!1sfr!2sfr"
+              src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d2639.897840429089!2d7.478446099999999!3d48.46124639999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x47914d58de6ce7ed%3A0xe5e1dd87cdc774ba!2sPl.%20du%20March%C3%A9%2067210%20Obernai!3m2!1d48.4622198!2d7.4820322!4m5!1s0x47914d5f47a6d193%3A0x37b58f0c5a576eb8!2s11%20Rem%20Mar%C3%A9chal%20Joffre%2C%2067210%20Obernai%2C%20France!3m2!1d48.460364!2d7.480542!5e0!3m2!1sfr!2sfr!4v1717622540354!5m2!1sfr!2sfr"
               width="100%" 
               height="400"
               style={{ border: 0, borderRadius: '8px' }}
@@ -128,7 +165,7 @@ export default function Home() {
                 <h4>En Train</h4>
                 <p>La gare d&apos;Obernai est à seulement 10 minutes à pied du centre-ville.</p>
                 <p>Trains réguliers depuis Strasbourg (15-20 minutes de trajet).</p>
-                <a href="https://www.sncf-connect.com/" target="_blank" rel="noopener noreferrer" className="transport-link">Horaires SNCF</a>
+                {/* <a href="https://www.sncf-connect.com/" target="_blank" rel="noopener noreferrer" className="transport-link">Horaires SNCF</a> */}
               </div>
               
               <div className="transport-card">
@@ -159,56 +196,15 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="musique">
-          <h2>Musique</h2>
-          <div className="music-content">
-            <p>Aidez-nous à créer l&apos;ambiance parfaite pour notre cocktail !</p>
-            <p className="music-description">
-              Nous souhaitons que chacun puisse contribuer à la playlist de notre mariage. 
-              N&apos;hésitez pas à ajouter vos chansons préférées qui vous font danser, qui vous 
-              touchent ou qui vous rappellent de bons souvenirs.
-            </p>
-            
-            <div className="music-container">
-              <div className="spotify-container">
-                <iframe 
-                  src="https://open.spotify.com/embed/playlist/0vD8z3pgwmhU3wZYGcHq1X?utm_source=generator&theme=0" 
-                  width="100%" 
-                  height="380" 
-                  frameBorder="0" 
-                  allowFullScreen 
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                  loading="lazy"
-                  title="Playlist mariage Tatiana & Jean-Romain"
-                ></iframe>
-              </div>
-              
-              <div className="playlist-instructions">
-                <h3>Comment ajouter des chansons :</h3>
-                <ol>
-                  <li>Ouvrez la playlist sur Spotify en <a href="https://open.spotify.com/playlist/0vD8z3pgwmhU3wZYGcHq1X" target="_blank" rel="noopener noreferrer">cliquant ici</a></li>
-                  <li>Connectez-vous à votre compte Spotify</li>
-                  <li>Cliquez sur les trois points (...) et sélectionnez &quot;Ajouter à cette playlist&quot;</li>
-                  <li>Recherchez et ajoutez vos chansons préférées</li>
-                </ol>
-                <p className="music-note">Vos suggestions nous aideront à créer une ambiance inoubliable pour cette journée spéciale !</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section id="cagnotte">
           <h2>Cagnotte</h2>
           <div className="cagnotte-container">
             <div className="cagnotte-content">
-              <h3 className="cagnotte-subtitle">Votre présence est notre plus beau cadeau</h3>
+              {/* <h3 className="cagnotte-subtitle">Votre présence est notre plus beau cadeau</h3> */}
+  
               
               <p className="cagnotte-message">
-                Chers amis et famille, votre présence à notre mariage est tout ce dont nous avons besoin pour rendre cette journée spéciale.
-              </p>
-              
-              <p className="cagnotte-message">
-                Nous n&apos;attendons aucun cadeau, car célébrer ce moment avec vous est déjà le plus beau des présents. Cependant, si vous souhaitez participer à notre bonheur d&apos;une autre façon, nous avons créé une cagnotte qui nous aidera à réaliser nos projets à venir.
+                Nous n&apos;attendons aucun cadeau, car célébrer ce moment avec vous est déjà le plus beau des présents. Cependant, si vous souhaitez participer, nous avons créé (ou sommes entrain de créer) une cagnotte qui nous aidera à réaliser nos projets à venir.
               </p>
               
               <div className="cagnotte-button-container">

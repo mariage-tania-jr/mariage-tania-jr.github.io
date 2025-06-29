@@ -16,12 +16,6 @@ export default function Home() {
         </nav>
       </header>
 
-      <div className="accommodation-disclaimer">
-        <p>
-          <em>Nous vous informons avec regret que nous ne pouvons pas proposer d&apos;hébergement pour la nuit.</em>
-        </p>
-      </div>
-
       <main>
         <section id="main-title" className="title-section">
           <div className="image-container">
@@ -35,6 +29,18 @@ export default function Home() {
             />
           </div>
         </section>
+
+        <div className="accommodation-disclaimer">
+          <p>
+            <em>Nous vous informons avec regret que nous ne pouvons pas proposer d&apos;hébergement pour la nuit.</em>
+          </p>
+        </div>
+
+        <div className="plus-one-disclaimer">
+          <p>
+            <em>Oups ! Nous avons oublié de le mentionner sur le faire-part : vous avez bien sûr droit à un accompagnant(e) (+1) !</em>
+          </p>
+        </div>
 
         <section id="programme">
           <h2>Programme</h2>

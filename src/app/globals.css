@@ -72,7 +72,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid #FFB6C1; /* Light pink border */
   border-radius: 8px;
   padding: 1rem 1.5rem;
-  margin: 1.5rem auto;
+  margin: 1.5rem auto 0.75rem; /* Reduced bottom margin */
   max-width: 800px; /* Match the navbar width */
   text-align: center;
   border-left: 4px solid #FFB6C1; /* Accent border */
@@ -86,6 +86,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .accommodation-disclaimer em {
+  color: #555; /* Darker color for emphasis */
+}
+
+/* Plus-one disclaimer */
+.plus-one-disclaimer {
+  background-color: #F0F8FF; /* Very light blue for different info */
+  border: 1px solid #87CEEB; /* Light sky blue border */
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin: 0.75rem auto 1.5rem; /* Reduced top margin, smaller bottom margin */
+  max-width: 800px; /* Match the navbar width */
+  text-align: center;
+  border-left: 4px solid #87CEEB; /* Accent border */
+}
+
+.plus-one-disclaimer p {
+  margin: 0;
+  color: #444; /* Darker color for better readability */
+  font-size: 1.1rem; /* Increased font size */
+  line-height: 1.5;
+}
+
+.plus-one-disclaimer em {
   color: #555; /* Darker color for emphasis */
 }
 
@@ -109,8 +132,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Section styles */
 section {
-  margin: 5rem 0;
+  margin: 3rem 0; /* Reduced from 5rem to 3rem */
   padding: 0 1rem;
+}
+
+section:first-of-type {
+  margin-top: 2rem; /* Even smaller margin for the first section (programme) */
 }
 
 section h2 {
@@ -508,6 +535,15 @@ section p {
   }
   
   .accommodation-disclaimer p {
+    font-size: 1rem; /* Larger font size for mobile */
+  }
+  
+  .plus-one-disclaimer {
+    margin: 1rem;
+    padding: 0.8rem 1rem;
+  }
+  
+  .plus-one-disclaimer p {
     font-size: 1rem; /* Larger font size for mobile */
   }
   

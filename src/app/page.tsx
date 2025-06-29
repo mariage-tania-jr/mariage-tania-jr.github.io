@@ -16,6 +16,12 @@ export default function Home() {
         </nav>
       </header>
 
+      <div className="accommodation-disclaimer">
+        <p>
+          <em>Nous vous informons avec regret que nous ne pouvons pas proposer d&apos;hébergement pour la nuit.</em>
+        </p>
+      </div>
+
       <main>
         <section id="main-title" className="title-section">
           <div className="image-container">
@@ -141,6 +147,14 @@ export default function Home() {
                 <p><strong>Adresse :</strong> 2 Rempart Freppel, 67210 Obernai</p>
                 <p><strong>Tarif :</strong> Environ 1,50€/heure</p>
               </div>
+              
+              <div className="transport-card">
+                <div className="transport-icon">🅿️</div>
+                <h4>Parking du Stade</h4>
+                <p>Parking gratuit à 15 minutes à pied.</p>
+                <p>Alternative pratique avec une petite marche.</p>
+                <p><strong>Adresse :</strong> Parking du Stade, D422, 67210 Obernai</p>
+              </div>
             </div>
           </div>
         </section>
@@ -198,7 +212,7 @@ export default function Home() {
               </p>
               
               <div className="cagnotte-button-container">
-                <a href="https://www.leetchi.com/" target="_blank" rel="noopener noreferrer" className="cagnotte-button">
+                <a href="https://www.leetchi.com/fr/c/mariage-tania-jro-1104247?utm_source=copylink&utm_medium=social_sharing" target="_blank" rel="noopener noreferrer" className="cagnotte-button">
                   Accéder à la cagnotte
                 </a>
               </div>

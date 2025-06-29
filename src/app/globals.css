@@ -66,6 +66,29 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: underline;
 }
 
+/* Accommodation disclaimer */
+.accommodation-disclaimer {
+  background-color: #FFF5F8; /* Very light pink to match theme */
+  border: 1px solid #FFB6C1; /* Light pink border */
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem auto;
+  max-width: 800px; /* Match the navbar width */
+  text-align: center;
+  border-left: 4px solid #FFB6C1; /* Accent border */
+}
+
+.accommodation-disclaimer p {
+  margin: 0;
+  color: #444; /* Darker color for better readability */
+  font-size: 1.1rem; /* Increased font size */
+  line-height: 1.5;
+}
+
+.accommodation-disclaimer em {
+  color: #555; /* Darker color for emphasis */
+}
+
 /* Title section */
 .title-section {
   margin: 3rem 0;
@@ -259,10 +282,13 @@ section p {
 }
 
 .transport-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 1.5rem;
   justify-content: center;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .transport-card {
@@ -270,9 +296,6 @@ section p {
   padding: 1.8rem;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  flex: 1;
-  min-width: 250px;
-  max-width: 350px;
   position: relative;
   text-align: left;
 }
@@ -479,6 +502,15 @@ section p {
     width: 100%;
   }
   
+  .accommodation-disclaimer {
+    margin: 1rem;
+    padding: 0.8rem 1rem;
+  }
+  
+  .accommodation-disclaimer p {
+    font-size: 1rem; /* Larger font size for mobile */
+  }
+  
   section h2 {
     font-size: 2.8rem;
   }
@@ -513,6 +545,11 @@ section p {
   .venue-details {
     gap: 1.5rem;
   }
+  
+  .transport-cards {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
 }
 
 @media (max-width: 580px) {
@@ -521,11 +558,8 @@ section p {
   }
   
   .transport-cards {
+    grid-template-columns: 1fr;
     gap: 1rem;
-  }
-  
-  .transport-card {
-    min-width: 100%;
   }
 }
 
